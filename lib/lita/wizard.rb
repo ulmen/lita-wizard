@@ -158,7 +158,7 @@ class Lita::Wizard
       return false if pending_wizard?(message.user.id)
       wizard = new(robot, message, 'meta' => meta)
       wizard.advance
-      true
+      wizard.values
     end
 
     def handle_message(robot, message)
